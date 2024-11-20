@@ -1,0 +1,97 @@
+"use strict";
+/*
+-------------   Existen dos formas de declarar un Objeto(); -----
+1º ->  
+let NombreObjeto = new Object();  Esta es la forma tipo constructor.
+
+let NombreObeto ={};  Es la forma Literal.
+
+-----------------  Para añadirle datos: -----------------
+
+let NombreObjeto = {
+    key1: "Valor String",
+    key2: 123,  ---->>> VALOR NUMERICO
+    key3: true,  --->>> VALOR BOOLEAN
+};
+-----------  Para llamar el objeto ----
+
+ejemplo con un Alert();
+
+alert(NombreObjeto.KeyObjeto); ejemplo alert(user.name);1
+
+ADEMÁS PODEMOS SEGUIR AÑADIENDO DATOS AL OBJETO.
+
+let objeto = {....
+};
+afuera de las llaves podemos añadir un key al objeto y asignarle un valor:
+
+objeto.NuevaKey = "Nuevo Valor";
+
+
+let user ={
+name:"Mávio",
+subname:"Borges",
+age:26,
+
+"le gusta programar": true,
+
+};
+
+---  Podriamos mostrar la cadena asi ---
+alert(user["le gusta programar"]);
+
+
+---  O si podemos guardar en una variable, si la usaremos mas veces, lo guardamos en una const ---
+
+let cadenaDelObjeto = "le gusta programar";
+
+alert(user[cadenaDelObjeto]); // tiene que ser entre [] ya que en el objeto es una cadena
+
+*/
+
+
+
+// ------------------ EJEMPLO P`RACTICO - CREAR UN USUARIO ----
+
+function createUser(name, surname, age) {
+    return { // retornar createUser
+        /*
+        -- podemos hacer de esta forma --
+        name: name,
+        surname: surname,
+        age: age
+        -- o de esta  mas resumida
+        */
+        name, // es lo mismo que hacer name: name,
+        surname,
+        age // hay una forma clasica tambien que es a este age hacerle un --->  "edad": age 
+    };
+}
+
+let user = {
+    name: "Mavio",
+    age: 26,
+    statusOn: true,
+    userType: "admin",
+    "estado_civil": true
+}
+
+//alert("name" in user); // devuelve true
+// alert(["Es guapo"] in user); // devuelve true
+
+//let dataUserName = ["Es guapo"] in user;
+let nombre;
+let edad;
+let tipoUsuario;
+let estadoCivil;
+if (["statusOn"] in user && user["statusOn"] == true) {
+    nombre = user["name"];
+    edad = user["age"];
+    tipoUsuario = user["userType"];  
+    estadoCivil = user["estado_civil"] ? "Casado" : "Soltero"; 
+}
+let messageText =
+    `${tipoUsuario}\n
+El usuario ${nombre} tiene ${edad} años, y actualmente está ${estadoCivil}.`
+;
+alert(messageText);

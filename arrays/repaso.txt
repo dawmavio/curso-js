@@ -1,0 +1,53 @@
+/*  ------ ARRAYS -------
+se puede añadir todo tipo de datos hasta objetos y funciones
+let arrayLoco =[];
+
+*/
+arrayLoco = [
+    //Strings
+    "pera",
+    "Manzana",
+    "Melón",
+    //numbers
+    1,
+    2,
+    3.014,
+    //Objects
+    {
+        name   : "Mavio",
+        age    :  26,
+        status :  "Student"
+    },
+    //Functions
+    function Saludar(){
+        alert("Hola Mundo!");
+    }
+];
+
+arrayLoco[0]; //su valor es igual a pera. Para verlo se podria usar un alert(arrayLoco[0]);
+
+arrayLoco[7];//iRIAMOS A LA FUNCION. Pero de esta manera solo se guardaria los valores en forma string . se veria lo que hay en esa posicion del array.
+arrayLoco[7]();//saltaria la llamada de la funcion--> si dentro hay un alert pues este salta.
+
+arrayLoco[6].name; //aqui ya se guarda lo que hay dentro de name dekl objeto en esa posicion.
+
+alert(arrayLoco[6].name);
+
+
+let listaFrutas = [
+    "Uva",
+    "Pera",
+    "Manzana",
+    "Melón"
+];
+
+//Metodos para el array
+/*
+push: añade al final del array
+pop: elimina el ultimo elemento del array
+shift: elimina el primer elemento del array
+unshift: añade un elemento al princiio -> igual que push pero al inicio. array.unshift("elemento_para_array");
+*/
+//listaFrutas.push("zanhoria"); //añade a la ultima posicion este valor y elemento.
+//listaFrutas.pop(); elimina el ultimno elemento
+alert(listaFrutas);

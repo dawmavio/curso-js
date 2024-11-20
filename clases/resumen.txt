@@ -1,0 +1,31 @@
+"use strict";
+
+/*   ----   C L A S E S ---- */
+/*
+todas las clases tienen sus metodos contructor y los personalizados.
+ *class NombreClase {
+    constructor(){}
+
+    medoto1(){}
+    metodo2(){}
+ }
+ * 
+ *  
+ */
+class User{
+    constructor(name){
+        this.name = name;
+    }
+
+    sayHello(){
+        alert("Hola " + this.name);
+    }
+}
+
+let user = new User("Mavio");
+
+let user2 = new User("Alicia");
+
+user.sayHello();
+
+user2.sayHello();
