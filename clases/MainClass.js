@@ -35,7 +35,7 @@ Todas las clases tienen sus metodos contructor y los personalizados.
     
 
     
-    //GET
+    //SET
     set marca(NuevaMarca){
         return this._marca = NuevaMarca; //le devlvemos el nuevo valor añadido al atributo marca.  marca -> NuevaMarca
     }
